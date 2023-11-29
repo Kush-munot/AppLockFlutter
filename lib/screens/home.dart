@@ -22,6 +22,7 @@ class _HomePageState extends State<HomePage> {
         !(await Get.find<MethodChannelController>()
             .checkUsageStatePermission())) {
       Get.find<MethodChannelController>().update();
+      // ignore: use_build_context_synchronously
       askPermissionBottomSheet(context);
     }
   }

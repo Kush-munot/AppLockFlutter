@@ -25,7 +25,7 @@ class _SearchPageState extends State<SearchPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).backgroundColor,
+        backgroundColor: Theme.of(context).colorScheme.background,
         centerTitle: true,
         iconTheme: const IconThemeData(
           color: Colors.white,
@@ -52,7 +52,7 @@ class _SearchPageState extends State<SearchPage> {
         ),
         title: Text(
           "Search App",
-          style: Theme.of(context).textTheme.bodyText1!.copyWith(
+          style: Theme.of(context).textTheme.bodyLarge!.copyWith(
                 color: Colors.white,
               ),
         ),
@@ -78,7 +78,7 @@ class _SearchPageState extends State<SearchPage> {
                   onChanged: (value) {
                     state.appSearch();
                   },
-                  style: Theme.of(context).textTheme.subtitle1!.copyWith(
+                  style: Theme.of(context).textTheme.titleMedium!.copyWith(
                         color: Colors.white,
                       ),
                   decoration: InputDecoration(
@@ -89,7 +89,7 @@ class _SearchPageState extends State<SearchPage> {
                     isCollapsed: true,
                     filled: true,
                     hintText: 'Search apps',
-                    hintStyle: Theme.of(context).textTheme.subtitle1!.copyWith(
+                    hintStyle: Theme.of(context).textTheme.titleMedium!.copyWith(
                           color: Colors.white,
                         ),
                     prefixIcon: const Padding(
@@ -163,7 +163,7 @@ class _SearchPageState extends State<SearchPage> {
                                           .appName,
                                       style: Theme.of(context)
                                           .textTheme
-                                          .bodyText1!
+                                          .bodyLarge!
                                           .copyWith(color: Colors.white),
                                     ),
                                     Text(
@@ -171,7 +171,7 @@ class _SearchPageState extends State<SearchPage> {
                                           .versionName,
                                       style: Theme.of(context)
                                           .textTheme
-                                          .subtitle1!
+                                          .titleMedium!
                                           .copyWith(
                                             color: Colors.white,
                                             fontSize: 12,
